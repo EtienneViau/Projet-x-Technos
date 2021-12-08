@@ -6,10 +6,10 @@ using UnityEngine;
 public class ChessPuzzle : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private Animator _anim;
+    [SerializeField] private GameObject _coffre;
     void Start()
     {
-        _anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class ChessPuzzle : MonoBehaviour
     }
     public void OuvrirLeCoffre() 
     {
-        _anim.SetBool("Key", true);
+        _coffre.GetComponent<Animator>().SetBool("key", true);
     }
     
     
