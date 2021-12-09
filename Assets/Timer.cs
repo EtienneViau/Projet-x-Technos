@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
-
 public class Timer : MonoBehaviour
 {
     private float timing=600.0f;
-    [SerializeField] private Text _decompte;
+    [SerializeField] private TextMeshPro _decompte;
     // Start is called before the first frame update
     void Start()
     {
