@@ -22,15 +22,14 @@ public class RammasserTouteLesObjets : MonoBehaviour
     {
         if(_objetRamasser==4){
             ArbreRoue.SetActive(false);
-            audioSource.PlayOneShot(achievement);
         }
         if(_objetRamasser==5){
             ArbreAmpoule.SetActive(false);
             ArbrePourAmpoule.SetActive(false);
-            audioSource.PlayOneShot(achievement);
         }
         if(_objetRamasser==6){
             Debug.Log("TU AS GAGNER");
+            SceneManager.LoadScene("MainMenu");
         }
     }
     public void AjouterUnObjet(){
@@ -41,4 +40,5 @@ public class RammasserTouteLesObjets : MonoBehaviour
         _objetRamasser--;
         Debug.Log(_objetRamasser);
     }
+    
 }

@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 public class Timer : MonoBehaviour
 {
-    private float timing=250.0f;
-    [SerializeField] private TextMeshPro _decompte;
+    private float timing=600.0f;
+    [SerializeField] private Text _decompte;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +15,11 @@ public class Timer : MonoBehaviour
     }
 
     private void Chrono() {
-        // if(_timer==0){
-        //     SceneManager.LoadScene("Fin");
-        // }else{
+        if(timing==0){
+            SceneManager.LoadScene("MainMenu");
+        }else{
         timing--;
         _decompte.text=timing.ToString();
-        // }
+        }
     }
 }
